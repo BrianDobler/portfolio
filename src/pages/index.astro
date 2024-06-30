@@ -1,11 +1,38 @@
 ---
-import Layout from '../layouts/Layout.astro';
-
+import Linkedin from "@/components/iconos/Linkedin.astro";
+import Layout from "../layouts/Layout.astro";
+import Redes from "@/components/Redes.astro";
+import Github from "@/components/iconos/Github.astro";
+import Mail from "@/components/iconos/Mail.astro";
 ---
 
-<Layout title="Portfolio Dobler Brian">
-	<main>
-		
-	</main>
+<Layout
+  title="Portfolio Dobler Brian - Desarrollador Frontend Jr."
+  description="Apasionado por el diseño y la programación para que la experiencia del usuario sea lo mas agradable posible."
+>
+  <main>
+    <section class="w-full lg:w-[740px] mx-auto py-44">
+      <h1 class="text-5xl font-bold flex gap-x-2 pb-4">
+        Frontend Developer
+      </h1>
+      <h2 class="text-2xl text-wrap">
+        Soy Brian Dobler, estudiante avanzado de la carrera Ingeniería en
+        Sistemas de Información.
+      </h2>
+      <nav class="flex gap-x-2 py-2 justify-end">
+        <Redes href="https://www.linkedin.com/in/brian-dobler17">
+          <Linkedin />
+          LinkedIn →
+        </Redes>
+        <Redes href="https://github.com/BrianDobler">
+          <Github />
+          Github →
+        </Redes>
+        <Redes href="https://github.com/BrianDobler">
+          <Mail />
+          brianahueldobler@gmail.com →
+        </Redes>
+      </nav>
+    </section>
+  </main>
 </Layout>
-
