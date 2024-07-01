@@ -1,5 +1,6 @@
 ---
 import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
 import DotPattern from "../components/magicui/dot-pattern.tsx"
 
 
@@ -25,6 +26,7 @@ const { title,description } = Astro.props;
     <DotPattern/>
     <Header />
     <slot />
+    <Footer />
   </body>
 </html>
 <style is:global>
@@ -35,12 +37,20 @@ const { title,description } = Astro.props;
   html {
     font-family: "Satoshi",system-ui, sans-serif;
     background: #13151a;
+    scroll-behavior: smooth;
   }
+ 
   body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
   }
+  
+@media (prefers-reduced-motion: reduce){
+  html{
+    scroll-behavior: auto;
+  }
+}
   
   @font-face {
         font-family: "Satoshi";
