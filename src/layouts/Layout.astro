@@ -1,15 +1,14 @@
 ---
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-import DotPattern from "../components/magicui/dot-pattern.tsx"
-
+import DotPattern from "../components/magicui/dot-pattern.tsx";
 
 interface Props {
   title: string;
   description: string;
 }
 
-const { title,description } = Astro.props;
+const { title, description } = Astro.props;
 ---
 
 <!doctype html>
@@ -23,7 +22,7 @@ const { title,description } = Astro.props;
     <title>{title}</title>
   </head>
   <body>
-    <DotPattern/>
+    <DotPattern />
     <Header />
     <slot />
     <Footer />
@@ -34,50 +33,54 @@ const { title,description } = Astro.props;
     color-scheme: light dark;
   }
 
+  body.dark {
+    background-color: #13151a;
+  }
+  
   html {
-    font-family: "Satoshi",system-ui, sans-serif;
-    background: #13151a;
+    font-family: "Satoshi", system-ui, sans-serif;
+    background: #f3f2f2;
     scroll-behavior: smooth;
   }
- 
+
   body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
   }
-  
-@media (prefers-reduced-motion: reduce){
-  html{
-    scroll-behavior: auto;
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
   }
-}
-  
+
   @font-face {
-        font-family: "Satoshi";
-        src: url("/fuente/Satoshi-Bold.woff2") format("woff2");
-        font-weight: 700;
-        font-style: normal;
-        font-display: swap;
-      }
-      @font-face {
-        font-family: "Satoshi";
-        src: url("/fuente/Satoshi-Black.woff2") format("woff2");
-        font-weight: 900;
-        font-style: normal;
-        font-display: swap;
-      }
-      @font-face {
-        font-family: "Satoshi";
-        src: url("/fuente/Satoshi-Medium.woff2") format("woff2");
-        font-weight: 600;
-        font-style: normal;
-        font-display: swap;
-      }
-      @font-face {
-        font-family: "Satoshi";
-        src: url("/fuente/Satoshi-Light.woff2") format("woff2");
-        font-weight: 400;
-        font-style: normal;
-        font-display: swap;
-      }
+    font-family: "Satoshi";
+    src: url("/fuente/Satoshi-Bold.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Satoshi";
+    src: url("/fuente/Satoshi-Black.woff2") format("woff2");
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Satoshi";
+    src: url("/fuente/Satoshi-Medium.woff2") format("woff2");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Satoshi";
+    src: url("/fuente/Satoshi-Light.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
 </style>

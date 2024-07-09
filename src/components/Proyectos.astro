@@ -1,0 +1,41 @@
+---
+import type { ActionError } from "astro:actions";
+import ProyectosItem from "./ProyectosItem.astro";
+
+const PROYECTO = [
+  {
+    fecha: "Junio 2024 ",
+    titulo: "Spurify - Clone de Spotify",
+    descripcion:
+      "\nModificaciones de datos, debug de Procedimientos Almacenados,\nTriggers, Funciones, Vistas como así también la creación de los mismos.\nBackups de objetos, extracción de reportes mensuales para los diferentes\norganismos, ya sean Ministerio u Agencias de la provincia."
+    },
+  {
+    fecha: "Junio 2024 ",
+    titulo: "Spurify - Clone de Spotify",
+    descripcion:
+      "\nModificaciones de datos, debug de Procedimientos Almacenados,\nTriggers, Funciones, Vistas como así también la creación de los mismos.\nBackups de objetos, extracción de reportes mensuales para los diferentes\norganismos, ya sean Ministerio u Agencias de la provincia."
+    },
+  {
+    fecha: "Junio 2024 ",
+    titulo: "Spurify - Clone de Spotify",
+    descripcion:
+      "\nModificaciones de datos, debug de Procedimientos Almacenados,\nTriggers, Funciones, Vistas como así también la creación de los mismos.\nBackups de objetos, extracción de reportes mensuales para los diferentes\norganismos, ya sean Ministerio u Agencias de la provincia."
+    },
+  {
+    fecha: "Junio 2024 ",
+    titulo: "Spurify - Clone de Spotify",
+    descripcion:
+      "\nModificaciones de datos, debug de Procedimientos Almacenados,\nTriggers, Funciones, Vistas como así también la creación de los mismos.\nBackups de objetos, extracción de reportes mensuales para los diferentes\norganismos, ya sean Ministerio u Agencias de la provincia."
+    },
+];
+---
+
+<ol class="relative border-s border-yellow-200 dark:border-gray-700">
+  {
+    PROYECTO.map((proyecto) => (
+      <li class="mb-10 ms-4">
+        <ProyectosItem {...proyecto} />
+      </li>
+    ))
+  }
+</ol>
