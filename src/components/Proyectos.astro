@@ -4,33 +4,30 @@ import ProyectosItem from "./ProyectosItem.astro";
 
 const PROYECTO = [
   {
-    fecha: "Junio 2024 ",
+    fecha: "Sept 2024",
+    titulo: "Portfolio",
+    descripcion:
+      "\nRealice este portfolio en su mayoria con Astro y React.",
+      link:""
+    },
+    
+  {
+    fecha: "Jul 2024 ",
     titulo: "Spurify - Clone de Spotify",
     descripcion:
-      "\nModificaciones de datos, debug de Procedimientos Almacenados,\nTriggers, Funciones, Vistas como así también la creación de los mismos.\nBackups de objetos, extracción de reportes mensuales para los diferentes\norganismos, ya sean Ministerio u Agencias de la provincia."
+      "\nRealice un clon de la famosa aplicacion de streaming de musica, con la busque replicar las funcionalidades basicas, como la reproduccion de canciones, el control de las mismas, el volumen, como tambien la gestion de las playlists. ",
+    link:""
     },
   {
-    fecha: "Junio 2024 ",
-    titulo: "Spurify - Clone de Spotify",
-    descripcion:
-      "\nModificaciones de datos, debug de Procedimientos Almacenados,\nTriggers, Funciones, Vistas como así también la creación de los mismos.\nBackups de objetos, extracción de reportes mensuales para los diferentes\norganismos, ya sean Ministerio u Agencias de la provincia."
-    },
-  {
-    fecha: "Junio 2024 ",
-    titulo: "Spurify - Clone de Spotify",
-    descripcion:
-      "\nModificaciones de datos, debug de Procedimientos Almacenados,\nTriggers, Funciones, Vistas como así también la creación de los mismos.\nBackups de objetos, extracción de reportes mensuales para los diferentes\norganismos, ya sean Ministerio u Agencias de la provincia."
-    },
-  {
-    fecha: "Junio 2024 ",
-    titulo: "Spurify - Clone de Spotify",
-    descripcion:
-      "\nModificaciones de datos, debug de Procedimientos Almacenados,\nTriggers, Funciones, Vistas como así también la creación de los mismos.\nBackups de objetos, extracción de reportes mensuales para los diferentes\norganismos, ya sean Ministerio u Agencias de la provincia."
-    },
+  fecha: "Jul 2023 - Nov 2023",
+  titulo: "ForesTV",
+  descripcion: "Desarrollé un sistema web para la visualización de partidos de fútbol, con un diseño atractivo y responsive. La aplicación incluye tarjetas informativas, carruseles de imágenes, e integraciones de video y sonido para una experiencia interactiva y optimizada en cualquier dispositivo.",
+  link:"" 
+} 
 ];
 ---
 
-<ol class="relative border-s border-yellow-200 dark:border-gray-700">
+<ol class="relative border-s border-yellow-200">
   {
     PROYECTO.map((proyecto) => (
       <li class="mb-10 ms-4">

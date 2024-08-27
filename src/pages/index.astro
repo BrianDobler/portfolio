@@ -7,6 +7,7 @@ import Mail from "@/components/iconos/Mail.astro";
 import Experiencia from "@/components/Experiencia.astro";
 import Proyectos from "@/components/Proyectos.astro";
 import ContenedorSection from "../components/ContenedorSection.astro"
+import Educacion from "@/components/Educacion.astro";
 ---
 
 <Layout
@@ -15,10 +16,10 @@ import ContenedorSection from "../components/ContenedorSection.astro"
 >
   <main class="px-20"> 
     <ContenedorSection class="py-36 ">
-      <h1 class="lg:text-5xl md:text-4xl text-2xl font-bold 
+      <h1 class="lg:text-5xl md:text-4xl text-4xl font-bold 
       dark:text-violet-400/90 text-violet-700/90 shadow-violet-500 flex gap-x-2 pb-6 lg:pb-10"
       style="text-shadow: 2px 2px 40px rgba(139, 92, 246, 0.9);">Frontend Developer</h1>
-      <h2 class="lg:text-2xl pb-4 text-pretty text-md max-w-[700] dark:text-white text-gray-600">
+      <h2 class="lg:text-2xl pb-4 text-pretty text-md max-w-[700] dark:text-gray-300 text-gray-700">
         Hola me llamo Brian Dobler, soy estudiante avanzado de la carrera Ingeniería en
         Sistemas de Información.
         Actualmente estoy a la busca de seguir creciendo y perfeccionandome en el mundo del desarrollo web.
@@ -56,7 +57,7 @@ import ContenedorSection from "../components/ContenedorSection.astro"
       <h2 class="text-2xl font-semibold mb-6 dark:text-white text-gray-600  pt-10">
       🏢 Educación
       </h2>
-      <Proyectos />
+      <Educacion />
     </ContenedorSection>
   </main>
 </Layout>

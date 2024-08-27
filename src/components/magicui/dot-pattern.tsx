@@ -32,7 +32,7 @@ export function DotPattern({
     <svg
       aria-hidden="true"
       className={clsx(
-        "pointer-events-none  inset-0 h-full w-full fixed fill-neutral-400/60 dark:fill-neutral-400/20 from-zinc-900 via-zinc-900/90",
+        "pointer-events-none  inset-0 h-full w-full fixed fill-violet-400/30 dark:fill-violet-400/10 from-zinc-900 via-zinc-900/90",
         className,
       )}
       {...props}

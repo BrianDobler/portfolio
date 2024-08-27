@@ -1,0 +1,31 @@
+---
+import type { ActionError } from "astro:actions";
+import EducacionItem from "./EducacionItem.astro";
+
+const EDUCACION = [
+  {
+    fecha: "2013 - Actualidad",
+    titulo: "Universidad Tecnologica Nacional - Facultad Regional Cordoba",
+    descripcion:
+      "\nEstudiante del 4to año de la carrera Ingeniería en Sistemas de Información, conocimientos en Principios SOLID, Patrones de Diseño, Patrones Arquitectónicos, como tambien en tecnologias mencionadas en la experiencia laboral como en los proyectos."
+    },
+  {
+    fecha: "Jul 2023 - Nov 2023",
+    titulo: "Desarrollador Front End - BA Multiplica 2.0",
+    descripcion:
+      "\nMe capacite en un curso dictado por la ciudad de Buenos Aires en conjunto con la UTN de dicha provincia, para mejorar la capacidad y conocimientos del desarrollo web, que había adquirido en mi carrera universitaria. El proyecto realizado en este curso es el de ForesTV. "
+    }
+
+  
+];
+---
+
+<ol class="relative border-s border-violet-600 ">
+  {
+    EDUCACION.map((educacion) => (
+      <li class="mb-10 ms-4">
+        <EducacionItem {...educacion} />
+      </li>
+    ))
+  }
+</ol>
