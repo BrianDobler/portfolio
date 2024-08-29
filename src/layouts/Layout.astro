@@ -48,7 +48,18 @@ const { title, description } = Astro.props;
     flex-direction: column;
     min-height: 100vh;
   }
-
+  header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  backdrop-filter: blur(10px); 
+  WebkitBackdropFilter: blur(10px); 
+  background-color: rgba(255, 255, 255, 0); 
+  /*box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); */
+  z-index: 1000; 
+  transition: backdrop-filter 0.3s ease; 
+}
   @media (prefers-reduced-motion: reduce) {
     html {
       scroll-behavior: auto;
