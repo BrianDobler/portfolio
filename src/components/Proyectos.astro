@@ -8,7 +8,9 @@ const PROYECTO = [
     titulo: "Portfolio",
     descripcion:
       "\nRealice este portfolio en su mayoria con Astro y React.",
-      link:""
+      link:"",
+      imagen:'',
+      etiquetas: ["React", "Astro", "TailwindCSS", "Vercel"]
     },
     
   {
@@ -16,23 +18,25 @@ const PROYECTO = [
     titulo: "Spurify - Clone de Spotify",
     descripcion:
       "\nRealice un clon de la famosa aplicacion de streaming de musica, con la busque replicar las funcionalidades basicas, como la reproduccion de canciones, el control de las mismas, el volumen, como tambien la gestion de las playlists. ",
-    link:""
+    link:"https://spurify.vercel.app/",
+    imagen: "/imagenes/imgPorf1.webp",
+      etiquetas: ["React", "Astro", "TailwindCSS", "Vercel"]
     },
   {
   fecha: "Jul 2023 - Nov 2023",
   titulo: "ForesTV",
   descripcion: "Desarrollé un sistema web para la visualización de partidos de fútbol, con un diseño atractivo y responsive. La aplicación incluye tarjetas informativas, carruseles de imágenes, e integraciones de video y sonido para una experiencia interactiva y optimizada en cualquier dispositivo.",
-  link:"" 
+  link:"#" ,
+  imagen:"/imagenes/imgForest.webp",
+      etiquetas: ["React", "Astro", "TailwindCSS", "Vercel"]
 } 
 ];
 ---
 
-<ol class="relative border-s border-yellow-200">
-  {
+
+{
     PROYECTO.map((proyecto) => (
-      <li class="mb-10 ms-4">
         <ProyectosItem {...proyecto} />
-      </li>
+
     ))
   }
-</ol>

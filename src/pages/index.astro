@@ -6,7 +6,7 @@ import Github from "@/components/iconos/Github.astro";
 import Mail from "@/components/iconos/Mail.astro";
 import Experiencia from "@/components/Experiencia.astro";
 import Proyectos from "@/components/Proyectos.astro";
-import ContenedorSection from "../components/ContenedorSection.astro"
+import ContenedorSeccion from "../components/ContenedorSeccion.astro"
 import Educacion from "@/components/Educacion.astro";
 ---
 
@@ -15,13 +15,13 @@ import Educacion from "@/components/Educacion.astro";
   description="Apasionado por el diseño y la programación para que la experiencia del usuario sea lo mas agradable posible."
 >
   <main class="px-20"> 
-    <ContenedorSection class="py-36"
+    <ContenedorSeccion class="py-48"
     id="inicio">
       <h1 class="lg:text-5xl md:text-4xl text-4xl font-bold 
-      dark:text-violet-400/90 text-violet-700/90 shadow-violet-500 flex gap-x-2 pb-6 lg:pb-10"
-      style="text-shadow: 2px 2px 40px rgba(139, 92, 246, 0.9);">Frontend Developer</h1>
+      dark:text-violet-500/90 text-violet-800/90 shadow-violet-500 flex gap-x-2 pb-6 lg:pb-10"
+      style="text-shadow: 2px 2px 28px rgba(139, 92, 246, 0.9);">Desarrollador Frontend</h1>
       <h2 class="lg:text-2xl pb-4 text-pretty text-md max-w-[700] dark:text-gray-300 text-gray-700">
-        Hola me llamo Brian Dobler, soy estudiante avanzado de la carrera Ingeniería en
+        Hola 👋 soy Brian Dobler, soy estudiante avanzado de la carrera Ingeniería en
         Sistemas de Información.
         Actualmente estoy a la busca de seguir creciendo y perfeccionandome en el mundo del desarrollo web.
       </h2>
@@ -41,24 +41,24 @@ import Educacion from "@/components/Educacion.astro";
           brianahueldobler@gmail.com →
         </Redes>
       </nav>
-    </ContenedorSection>
-    <ContenedorSection id="experiencia">
-      <h2 class="text-2xl font-semibold mb-6 dark:text-white text-gray-600 pt-5">
+    </ContenedorSeccion>
+    <ContenedorSeccion id="experiencia">
+      <h2 class="text-2xl font-semibold mb-6 dark:text-white text-gray-600 ">
         💻 Experiencia Laboral
       </h2>
       <Experiencia />
-    </ContenedorSection>
-    <ContenedorSection id="proyectos">
+    </ContenedorSeccion>
+    <ContenedorSeccion id="proyectos">
       <h2 class="text-2xl font-semibold dark:text-white text-gray-600  mb-6 pt-10">
         ⚡Proyectos
       </h2>
       <Proyectos />
-    </ContenedorSection>
-    <ContenedorSection id="educacion">
+    </ContenedorSeccion>
+    <ContenedorSeccion id="educacion">
       <h2 class="text-2xl font-semibold mb-6 dark:text-white text-gray-600  pt-10">
       🏢 Educación
       </h2>
       <Educacion />
-    </ContenedorSection>
+    </ContenedorSeccion>
   </main>
 </Layout>
