@@ -1,7 +1,7 @@
 ---
 import Linkedin from "@/components/iconos/Linkedin.astro";
 import Layout from "../layouts/Layout.astro";
-import Redes from "@/components/Redes.astro";
+import BotonRedireccion from "@/components/BotonRedireccion.astro";
 import Github from "@/components/iconos/Github.astro";
 import Mail from "@/components/iconos/Mail.astro";
 import Experiencia from "@/components/Experiencia.astro";
@@ -18,44 +18,44 @@ import Educacion from "@/components/Educacion.astro";
     <ContenedorSeccion class="py-48"
     id="inicio">
       <h1 class="lg:text-5xl md:text-4xl text-4xl font-bold 
-      dark:text-violet-500/90 text-violet-800/90 shadow-violet-500 flex gap-x-2 pb-6 lg:pb-10"
-      style="text-shadow: 2px 2px 28px rgba(139, 92, 246, 0.9);">Desarrollador Frontend</h1>
+      dark:text-violet-500/90 text-violet-800/90 flex gap-x-2 pb-6 lg:pb-10"
+      style="text-shadow: 2px 2px 28px rgba(139, 92, 246, 0.8);">Desarrollador Frontend</h1>
       <h2 class="lg:text-2xl pb-4 text-pretty text-md max-w-[700] dark:text-gray-300 text-gray-700">
         Hola 👋 soy Brian Dobler, soy estudiante avanzado de la carrera Ingeniería en
         Sistemas de Información.
         Actualmente estoy a la busca de seguir creciendo y perfeccionandome en el mundo del desarrollo web.
       </h2>
       <nav class="flex gap-2 py-2 justify-end px-2 flex-wrap">
-        <Redes href="https://www.linkedin.com/in/brian-dobler17">
+        <BotonRedireccion href="https://www.linkedin.com/in/brian-dobler17">
           <Linkedin />
           LinkedIn →
-        </Redes>
-        <Redes href="https://github.com/BrianDobler">
+        </BotonRedireccion>
+        <BotonRedireccion href="https://github.com/BrianDobler">
           <Github />
           Github →
-        </Redes>
-        <Redes
+        </BotonRedireccion>
+        <BotonRedireccion
           href="https://mail.google.com/mail/?view=cm&fs=1&to=brianahueldobler@gmail.com"
         >
           <Mail />
           brianahueldobler@gmail.com →
-        </Redes>
+        </BotonRedireccion>
       </nav>
     </ContenedorSeccion>
-    <ContenedorSeccion id="experiencia">
+    <ContenedorSeccion id="experiencia" class="scroll-mt-24">
       <h2 class="text-2xl font-semibold mb-6 dark:text-white text-gray-600 ">
         💻 Experiencia Laboral
       </h2>
       <Experiencia />
     </ContenedorSeccion>
-    <ContenedorSeccion id="proyectos">
-      <h2 class="text-2xl font-semibold dark:text-white text-gray-600  mb-6 pt-10">
+    <ContenedorSeccion id="proyectos" class="scroll-mt-24">
+      <h2 class="text-2xl font-semibold dark:text-white text-gray-600  mb-6 ">
         ⚡Proyectos
       </h2>
       <Proyectos />
     </ContenedorSeccion>
-    <ContenedorSeccion id="educacion">
-      <h2 class="text-2xl font-semibold mb-6 dark:text-white text-gray-600  pt-10">
+    <ContenedorSeccion id="educacion" class="scroll-mt-24">
+      <h2 class="text-2xl font-semibold mb-6 dark:text-white text-gray-600 ">
       🏢 Educación
       </h2>
       <Educacion />

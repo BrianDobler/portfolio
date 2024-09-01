@@ -2,30 +2,28 @@
 import Badge from "./Badge.astro";
 import BotonDarkMode from "./DarkMode.jsx";
 
-
-const blur = `
-  window.addEventListener('scroll', function() {
-    const blurValue = window.scrollY > 50 ? 'blur(10px)' : 'blur(0)';
-    const header = document.querySelector('header');
-    if (header) {
-      header.style.backdropFilter = blurValue;
-      header.style.WebkitBackdropFilter = blurValue;
-    }
-  });
-`;
 ---
 
 <head>
   <script>
-    {blur}
+    const blurValor = 
+    window.addEventListener('scroll', function() {
+    const blurScroll = window.scrollY > 50 ? 'blur(10px)' : 'blur(0)';
+    const shadowScroll = window.scrollY > 50 ? '0 2px 5px rgba(0,0,0, 0.3)' : 'none';
+    const header = document.querySelector('header');
+    if (header) {
+      header.style.backdropFilter = blurScroll;
+      header.style.boxShadow= shadowScroll;
+    }
+  });
   </script>
 </head>
 
 <header
   class="top-0 left-0 w-full py-2 font-semibold"
 >
-  <div class="container mx-auto flex xl:w-[1120px] justify-between items-center">
-    <nav class="flex flex-row gap-x-4 opacity-90 dark:text-white/80 text-gray-700">
+  <div class="container mx-auto flex xl:w-[1120px]  justify-between items-center">
+    <nav class="flex flex-row gap-x-4 opacity-90  dark:text-white/80 text-gray-800">
       <a
         class="hover:bg-violet-800 rounded-sm hover:scale-105  px-4 hover:text-white duration-200 transition"
         href="#inicio"
