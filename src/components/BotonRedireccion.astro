@@ -1,9 +1,9 @@
 ---
-const { editComponenteBoton = '', ...props } = Astro.props;
+const { editComponenteBoton = '', classBtnProyecto = '', ...props } = Astro.props;
 ---
 
 <a
-  class={`bg-violet-800 text-violet-200 font-medium me-2 lg:px-2.5 ${editComponenteBoton} rounded 
+  class={`bg-violet-800 text-violet-200 font-medium me-2 lg:px-2.5 ${editComponenteBoton} ${classBtnProyecto} rounded 
     flex justify-center items-center w-34 lg:py-1 py-0.5 gap-4 
     hover:bg-yellow-600 opacity-90 transition duration-300 text-xs lg:text-md hover:scale-105`}
   {...props}

@@ -26,28 +26,30 @@ const tituloTrunc = (titulo: string) => {
   <h3 class="text-lg font-semibold text-orange-500 dark:text-white">{titulo}</h3>
   <p class="mb-4 text-base font-normal text-gray-900 dark:text-gray-500">
     {descripcion}</p>
-  
-{
-  imagen ?(
-  <img class="rounded-3xl py-4 z-1000 relative" src={imagen} alt={`Captura de pantalla del Proyecto ${titulo}`} /> 
-  ) : null
-}
-
+ 
+ <div class = "flex py-2 mb-8">   
+  {imagen ? (
+    <a href={link} target="_blank" rel="noopener noreferrer" class="block my-5 group relative">
+    <img 
+        class="rounded-xl z-1000 max-w-80 relative cursor-pointer transition duration-300 group-hover:scale-105 group-hover:blur-sm" 
+        src={imagen} 
+        style="box-shadow: 0px 0px 8px rgb(223, 175, 20);"
+        alt={`Captura de pantalla del Proyecto ${titulo}`} 
+      />
+      <span class="absolute inset-0 flex items-center justify-center text-white text-2xl font-bold opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+      <BotonRedireccion classBtnProyecto="absolute items-center justify-center">VER PROYECTO</BotonRedireccion>
+    </span>
+    </a>
+  ) : null}
+<div class="">
 <ul class="flex gap-2 py-2 justify-end px-2 flex-wrap">
     
   {etiquetas.map((etiqueta) => (
     <Badge>{etiqueta}</Badge>
   ))}
 </ul>
-{link && (
-  <div class="my-5">
-      <BotonRedireccion href={link} editComponenteBoton="lg:py-2 max-w-60 font-medium">
-        {tituloTrunc(titulo)}
-
-      </BotonRedireccion>
-    
-  </div>
-)}
+</div>
+</div>
 </article>
 
 

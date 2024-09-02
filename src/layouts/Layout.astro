@@ -4,22 +4,22 @@ import Footer from "../components/Footer.astro";
 import DotPattern from "../components/magicui/dot-pattern.tsx";
 
 interface Props {
-  title: string;
-  description: string;
+  titulo: string;
+  descripcion: string;
 }
 
-const { title, description } = Astro.props;
+const { titulo, descripcion } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content={description} />
+    <meta name="description" content={descripcion} />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
+    <title>{titulo}</title>
   </head>
   <body>
     <DotPattern />
