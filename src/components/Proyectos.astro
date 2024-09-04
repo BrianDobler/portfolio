@@ -1,7 +1,27 @@
 ---
+import IconoReact from "./iconos/React.jsx";
+import IconoAstro from "./iconos/Astro.jsx";
+import IconoTypescript from "./iconos/Typescript.jsx";
 import type { ActionError } from "astro:actions";
 import ProyectosItem from "./ProyectosItem.astro";
 
+const ETIQUETAS = {
+  REACT:{
+    nombre : 'React',
+    className: 'text-md flex flex-wrap rounded-md bg-green-700 my-2 mx-20 items-center text-white',
+    icono: IconoReact
+  },
+  ASTRO:{
+    nombre : 'Astro',
+    className: 'text-md flex flex-wrap rounded-md bg-green-700 my-2 mx-20 items-center text-white',
+    icono: IconoAstro
+  },
+  TYPESCRIPT:{
+    nombre : 'TypeScript',
+    className: 'text-md flex flex-wrap rounded-md bg-green-700 my-2 mx-20 items-center text-white',
+    icono: IconoTypescript
+  }
+}
 const PROYECTO = [
   {
     fecha: "Sept 2024",
@@ -10,7 +30,7 @@ const PROYECTO = [
       "\nRealice este portfolio en su mayoria con Astro y React.",
       link:"",
       imagen:'',
-      etiquetas: ["React", "Astro", "TailwindCSS", "Vercel"]
+      etiquetas: [ETIQUETAS.ASTRO,ETIQUETAS.REACT]
     },
     
   {
@@ -20,7 +40,7 @@ const PROYECTO = [
       "\nRealice un clon de la famosa aplicacion de streaming de musica, con la busque replicar las funcionalidades basicas, como la reproduccion de canciones, el control de las mismas, el volumen, como tambien la gestion de las playlists. ",
     link:"https://spurify.vercel.app/",
     imagen: "/imagenes/imagenSpurify.jpg",
-      etiquetas: ["React", "Astro", "TailwindCSS", "Vercel"]
+      etiquetas: [ETIQUETAS.ASTRO,ETIQUETAS.REACT,ETIQUETAS.TYPESCRIPT]
     },
   {
   fecha: "Jul 2023 - Nov 2023",
@@ -28,7 +48,7 @@ const PROYECTO = [
   descripcion: "Desarrollé un sistema web para la visualización de partidos de fútbol, con un diseño atractivo y responsive. La aplicación incluye tarjetas informativas, carruseles de imágenes, e integraciones de video y sonido para una experiencia interactiva y optimizada en cualquier dispositivo.",
   link:"#" ,
   imagen:"/imagenes/imgForest.webp",
-      etiquetas: ["React", "Astro", "TailwindCSS", "Vercel"]
+      etiquetas: [ETIQUETAS.REACT]
 } 
 ];
 

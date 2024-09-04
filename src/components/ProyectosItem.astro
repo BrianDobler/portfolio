@@ -1,14 +1,18 @@
 ---
-import Badge from './Badge.astro';
 import BotonRedireccion from './BotonRedireccion.astro';
 
+interface Etiqueta {
+  nombre: string;
+  className : string;
+  icono: React.ComponentType; 
+}
 interface Props {
   titulo: string;
   descripcion: string;
   link?: string;
   fecha: string;
   imagen: string;
-  etiquetas: string[];
+  etiquetas: Etiqueta[];
 }
 
 const {titulo, descripcion, link, fecha, imagen, etiquetas } = Astro.props;
@@ -27,29 +31,43 @@ const tituloTrunc = (titulo: string) => {
   <p class="mb-4 text-base font-normal text-gray-900 dark:text-gray-500">
     {descripcion}</p>
  
- <div class = "flex py-2 mb-8">   
+ <div class = "flex py-5">  
+  <div class="flex flex-wrap itme-center justify-center">
+    <ul class="gap-2 py-2 px-2">
+        
+      {etiquetas.map((etiqueta) => (
+        <li>
+          <span class={etiqueta.className}>
+            <etiqueta.icono className="size-5 mx-2"/>
+            {etiqueta.nombre}
+          </span>
+        </li>
+        
+      ))}
+    </ul>
+    </div> 
+
   {imagen ? (
-    <a href={link} target="_blank" rel="noopener noreferrer" class="block my-5 group relative">
+    <div class="relative block  group">
+      <div class="group-hover:scale-105 transition duration-300 cursor-pointer">
+    <a href={link} target="_blank" rel="noopener noreferrer" class="group-hover:scale-105 ">
+
     <img 
-        class="rounded-xl z-1000 max-w-80 relative cursor-pointer transition duration-300 group-hover:scale-105 group-hover:blur-sm" 
+        class="rounded-md  z-1000 max-w-80 relative group-hover:blur-sm" 
         src={imagen} 
-        style="box-shadow: 0px 0px 8px rgb(223, 175, 20);"
+        style="box-shadow: 0px 0px 20px rgb(0, 0, 0);"
         alt={`Captura de pantalla del Proyecto ${titulo}`} 
       />
-      <span class="absolute inset-0 flex items-center justify-center text-white text-2xl font-bold opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-      <BotonRedireccion classBtnProyecto="absolute items-center justify-center">VER PROYECTO</BotonRedireccion>
-    </span>
+      
     </a>
+      <span class="absolute inset-0 flex items-center justify-center text-white text-2xl font-bold opacity-0 transition-opacity
+       duration-300 group-hover:opacity-100">
+      <BotonRedireccion classBtnProyecto="absolute rounded-tr-none rounded-tl-none  hover:scale-100 bottom-0 left-0 w-full opacity-100">VER PROYECTO</BotonRedireccion>
+    </span>
+    </div>
+  </div>
   ) : null}
-<div class="">
-<ul class="flex gap-2 py-2 justify-end px-2 flex-wrap">
-    
-  {etiquetas.map((etiqueta) => (
-    <Badge>{etiqueta}</Badge>
-  ))}
-</ul>
-</div>
-</div>
+
 </article>
 
 
