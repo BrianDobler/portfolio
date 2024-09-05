@@ -1,25 +1,25 @@
 ---
-import IconoReact from "./iconos/React.jsx";
-import IconoAstro from "./iconos/Astro.jsx";
-import IconoTypescript from "./iconos/Typescript.jsx";
+import IconoReact from "./iconos/React.astro";
+import IconoAstro from "./iconos/IconoAstro.astro";
+import IconoTypescript from "./iconos/Typescript.astro";
 import type { ActionError } from "astro:actions";
 import ProyectosItem from "./ProyectosItem.astro";
 
 const ETIQUETAS = {
   REACT:{
     nombre : 'React',
-    className: 'text-md flex flex-wrap rounded-md bg-green-700 my-2 mx-20 items-center text-white',
-    icono: IconoReact
+    class: 'text-md flex flex-wrap rounded-md bg-green-700 my-2 mx-20 items-center text-white',
+    icono: IconoReact,
   },
   ASTRO:{
     nombre : 'Astro',
-    className: 'text-md flex flex-wrap rounded-md bg-green-700 my-2 mx-20 items-center text-white',
-    icono: IconoAstro
+    class: 'text-md flex flex-wrap rounded-md bg-green-700 my-2 mx-20 items-center text-white',
+    icono: IconoAstro,
   },
   TYPESCRIPT:{
     nombre : 'TypeScript',
-    className: 'text-md flex flex-wrap rounded-md bg-green-700 my-2 mx-20 items-center text-white',
-    icono: IconoTypescript
+    class: 'text-md flex flex-wrap rounded-md bg-green-700 my-2 mx-20 items-center text-white',
+    icono: IconoTypescript,
   }
 }
 const PROYECTO = [

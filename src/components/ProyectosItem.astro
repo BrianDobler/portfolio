@@ -3,8 +3,8 @@ import BotonRedireccion from './BotonRedireccion.astro';
 
 interface Etiqueta {
   nombre: string;
-  className : string;
-  icono: React.ComponentType; 
+  class : string; 
+  icono: any; 
 }
 interface Props {
   titulo: string;
@@ -17,11 +17,6 @@ interface Props {
 
 const {titulo, descripcion, link, fecha, imagen, etiquetas } = Astro.props;
 
-const tituloTrunc = (titulo: string) => {
-    const indiceTitulo = titulo.indexOf('-');
- 
-  return indiceTitulo !== -1 ? titulo.slice(0, indiceTitulo).trim() : titulo;
-};
 ---
 <article>
   <time
@@ -36,10 +31,10 @@ const tituloTrunc = (titulo: string) => {
     <ul class="gap-2 py-2 px-2">
         
       {etiquetas.map((etiqueta) => (
-        <li>
-          <span class={etiqueta.className}>
-            <etiqueta.icono className="size-5 mx-2"/>
-            {etiqueta.nombre}
+        <li >
+          <span class={`flex flex-gap ${etiqueta.class}`}>
+                <etiqueta.icono class="w-6 h-6 mr-2"/>
+                {etiqueta.nombre}
           </span>
         </li>
         
