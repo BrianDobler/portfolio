@@ -2,24 +2,56 @@
 import IconoReact from "./iconos/React.astro";
 import IconoAstro from "./iconos/IconoAstro.astro";
 import IconoTypescript from "./iconos/Typescript.astro";
+import IconoHtml from "./iconos/Html.astro";
+import IconoCss from "./iconos/Css.astro";
+import IconoJavascript from "./iconos/Javascript.astro";
+import IconoVercel from "./iconos/Vercel.astro";
+import IconoGithub from "./iconos/Github.astro";
 import type { ActionError } from "astro:actions";
 import ProyectosItem from "./ProyectosItem.astro";
 
 const ETIQUETAS = {
   REACT:{
     nombre : 'React',
-    class: 'text-md flex flex-wrap rounded-md bg-green-700 my-2 mx-20 items-center text-white',
-    icono: IconoReact,
+    class  : 'text-gray-800',
+    icono  : IconoReact,
   },
   ASTRO:{
     nombre : 'Astro',
-    class: 'text-md flex flex-wrap rounded-md bg-green-700 my-2 mx-20 items-center text-white',
-    icono: IconoAstro,
+    class  : 'text-gray-800',
+    icono  : IconoAstro,
   },
   TYPESCRIPT:{
     nombre : 'TypeScript',
-    class: 'text-md flex flex-wrap rounded-md bg-green-700 my-2 mx-20 items-center text-white',
-    icono: IconoTypescript,
+    class  : 'text-gray-800',
+    icono  : IconoTypescript,
+  },
+  HTML:{
+    nombre : 'HTML',
+    class  : 'text-gray-800',
+    icono  : IconoHtml,
+  },
+  CSS:{
+    nombre : 'CSS',
+    class  : 'text-gray-800',
+    icono  : IconoCss,
+  },
+  JAVASCRIPT:{
+    nombre : 'JavaScript',
+    class  : 'text-gray-800',
+    icono  : IconoJavascript,
+  }
+  ,
+  GITHUB:{
+    nombre : 'GitHub',
+    class  : 'text-gray-800',
+    icono  : IconoGithub,
+  }
+  ,
+  VERCEL:{
+    nombre : 'Vercel',
+    class  : 'text-gray-800',
+    icono  : IconoVercel,
   }
 }
 const PROYECTO = [
@@ -29,8 +61,8 @@ const PROYECTO = [
     descripcion:
       "\nRealice este portfolio en su mayoria con Astro y React.",
       link:"#",
-      imagen:'',
-      etiquetas: [ETIQUETAS.ASTRO,ETIQUETAS.REACT]
+      imagen:'./imagenes/imagenPortfolio.webp',
+      etiquetas: [ETIQUETAS.ASTRO,ETIQUETAS.REACT,ETIQUETAS.GITHUB,ETIQUETAS.VERCEL]
     },
     
   {
@@ -40,7 +72,7 @@ const PROYECTO = [
       "\nRealice un clon de la famosa aplicacion de streaming de musica, con la busque replicar las funcionalidades basicas, como la reproduccion de canciones, el control de las mismas, el volumen, como tambien la gestion de las playlists. ",
     link:"https://spurify.vercel.app",
     imagen: "/imagenes/imagenSpurify.webp",
-      etiquetas: [ETIQUETAS.ASTRO,ETIQUETAS.REACT,ETIQUETAS.TYPESCRIPT]
+      etiquetas: [ETIQUETAS.ASTRO,ETIQUETAS.REACT,ETIQUETAS.TYPESCRIPT,ETIQUETAS.GITHUB,ETIQUETAS.VERCEL]
     },
   {
   fecha: "Jul 2023 - Nov 2023",
@@ -48,7 +80,7 @@ const PROYECTO = [
   descripcion: "Desarrollé un sistema web para la visualización de partidos de fútbol, con un diseño atractivo y responsive. La aplicación incluye tarjetas informativas, carruseles de imágenes, e integraciones de video y sonido para una experiencia interactiva y optimizada en cualquier dispositivo.",
   link:"https://foresttv.vercel.app" ,
   imagen:"/imagenes/imagenForestv.webp",
-      etiquetas: [ETIQUETAS.REACT]
+      etiquetas: [ETIQUETAS.HTML,ETIQUETAS.CSS,ETIQUETAS.JAVASCRIPT,ETIQUETAS.GITHUB,ETIQUETAS.VERCEL]
 } 
 ];
 
