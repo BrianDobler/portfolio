@@ -23,7 +23,7 @@ const BotonDarkMode = () => {
   };
 
   return (
-    <button onClick={botonDarkMode} className=" items-center relative cursor-pointer hidden sm:inline-flex">
+    <button onClick={botonDarkMode} className=" items-center relative cursor-pointer inline-flex">
       <input
         className="peer hidden"
         id="toggle"

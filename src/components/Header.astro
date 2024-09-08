@@ -42,7 +42,7 @@ import BotonDarkMode from "./DarkMode.jsx";
 <header class="top-0 left-0 w-full py-2 font-semibold backdrop-blur-md bg-white/30 dark:bg-zinc-900/30 shadow-lg">
   <div class="container mx-auto flex xl:w-[1120px] md:w-[640px] justify-between items-center">
     
-    <button id="burger" class="sm:hidden block text-gray-800 px-5 dark:text-white focus:outline-none">
+    <button id="burger" class="transition duration-300 sm:hidden block text-gray-800 px-5 dark:text-white focus:outline-none">
       <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/>
       </svg>
@@ -65,9 +65,9 @@ import BotonDarkMode from "./DarkMode.jsx";
     </div>
   </div>
 
-  <div id="mobileNav" class="hidden sm:hidden flex-col items-center justify-center backdrop-blur-md bg-white/30 dark:bg-zinc-900/30 shadow-lg fixed top-0 left-0 w-full h-screen z-10">
-    <button id="closeMenu" class="absolute top-4 right-4 text-white">X</button>
-    <nav class="flex flex-col items-center justify-center gap-4">
+  <div id="mobileNav" class="hidden sm:hidden flex-col items-center justify-center backdrop-blur-md bg-yellow-500/90  shadow-lg fixed transition duration-300 top-0 left-0 w-full z-10">
+    <button id="closeMenu" class="absolute top-4 right-4 cursor:pointer text-base dark:text-white/80 text-gray-800">X</button>
+    <nav class="flex flex-col items-center justify-center gap-4 mt-4 dark:text-white/80 text-gray-800">
       <a class="hover:bg-violet-800 rounded-sm px-4 py-2 hover:text-white duration-200 transition" href="#inicio">Inicio</a>
       <a class="hover:bg-violet-800 rounded-sm px-4 py-2 hover:text-white duration-200 transition" href="#experiencia">Experiencia</a>
       <a class="hover:bg-violet-800 rounded-sm px-4 py-2 hover:text-white duration-200 transition" href="#proyectos">Proyectos</a>
