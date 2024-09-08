@@ -27,13 +27,13 @@ const {titulo, descripcion, link, fecha, imagen, etiquetas } = Astro.props;
   <p class="mb-4 text-base font-normal text-gray-900 dark:text-gray-500">
     {descripcion}</p>
  
- <div class = "flex py-5">  
+ <div class = "flex py-5 sm:flex-nowrap flex-wrap xl:w-[640px] md:w-[640px] items-center justify-center">  
   <div class="flex flex-wrap items-center justify-center">
-    <ul class="gap-2 py-2 px-2">
+    <ul class="gap-2 py-2 px-2 md:text-sm ">
         
       {etiquetas.map((etiqueta) => (
         <li >
-          <span class={`flex text-md  w-40 dark:text-white my-2 mx-20 
+          <span class={`flex text-md w-40 dark:text-white my-2 mx-20 
                 items-center 
                 ${etiqueta.class}`}>
                 <etiqueta.icono class="size-5 mx-4 bg-gray-700 rounded-md"/>
