@@ -48,22 +48,21 @@ const {titulo, descripcion, link, fecha, imagen, etiquetas } = Astro.props;
       <div class="group-hover:scale-105 transition duration-300  cursor-pointer ">
       <a href={link} 
         target={link === "#" ? "_self" : "_blank"} 
-        rel={"noopener noreferrer"}  class="group-hover:scale-105">
+        rel={"noopener noreferrer"} >
 
         <img 
-            class="rounded-md h-full z-1000 relative group-hover:blur-sm " 
+            class="rounded-md h-full z-1000 relative group-hover:blur-sm transition duration-300" 
             src={imagen} 
             style="box-shadow: 0px 0px 20px rgb(0, 0, 0);"
             alt={`Captura de pantalla del Proyecto ${titulo}`} 
           />
-          <span class="absolute inset-0 flex items-center justify-center text-white text-2xl font-bold opacity-0 transition-opacity
-          duration-300 group-hover:opacity-100">
-            <BotonRedireccion classBtnProyecto="absolute rounded-tr-none rounded-tl-none bottom-0 group-hover:scale-100 left-0 w-full">
+          <span class="absolute inset-0 flex items-center justify-center hover:rounded-md  text-white text-2xl font-semibold opacity-0 transition-opacity
+                        duration-300 group-hover:opacity-100">
                 VER PROYECTO
-            </BotonRedireccion>
-          </span>
+        </span>
         </a>
       </div>
+   
     </div>
   ) : null}
 
