@@ -40,32 +40,32 @@ import BotonDarkMode from "./DarkMode.jsx";
 </head>
 
 <header class="top-0 left-0 w-full py-2 font-semibold backdrop-blur-md bg-white/30 dark:bg-zinc-900/30 shadow-lg">
-  <div class="container mx-auto flex xl:w-[1120px] md:w-[640px] justify-between items-center">
+  <div class="container mx-auto flex xl:w-[1120px] md:w-[740px] justify-between items-center">
     
-    <button id="burger" class="transition duration-300 sm:hidden block text-gray-800 px-5 dark:text-white focus:outline-none">
+    <button id="burger" class="transition duration-300 md:hidden block text-gray-800 px-5 dark:text-white focus:outline-none">
       <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/>
       </svg>
     </button>
     
    
-    <nav id="nav" class="hidden sm:flex flex-row gap-x-4 md:gap-x-1 opacity-90 dark:text-white/80 text-gray-800">
-      <a class="hover:bg-violet-800 rounded-sm hover:scale-105 px-4 md:px-2 hover:text-white duration-200 transition" href="#inicio">Inicio</a>
-      <a class="hover:bg-violet-800 rounded-sm hover:scale-105 px-4 md:px-2 hover:text-white duration-200 transition" href="#experiencia">Experiencia</a>
-      <a class="hover:bg-violet-800 rounded-sm hover:scale-105 px-4 md:px-2 hover:text-white duration-200 transition" href="#proyectos">Proyectos</a>
-      <a class="hover:bg-violet-800 rounded-sm hover:scale-105 px-4 md:px-2 hover:text-white duration-200 transition" href="#educacion">Educación</a>
+    <nav id="nav" class="hidden md:flex flex-row gap-x-4 md:gap-x-1 opacity-90 dark:text-white/80 text-gray-800">
+      <a class="hover:bg-violet-800 rounded-sm hover:scale-105 px-4  hover:text-white duration-200 transition" href="#inicio">Inicio</a>
+      <a class="hover:bg-violet-800 rounded-sm hover:scale-105 px-4  hover:text-white duration-200 transition" href="#experiencia">Experiencia</a>
+      <a class="hover:bg-violet-800 rounded-sm hover:scale-105 px-4  hover:text-white duration-200 transition" href="#proyectos">Proyectos</a>
+      <a class="hover:bg-violet-800 rounded-sm hover:scale-105 px-4   hover:text-white duration-200 transition" href="#educacion">Educación</a>
     </nav>
 
     <div class="flex justify-center items-center px-4 gap-4">
       <BotonDarkMode client:only />
-      <a href="https://www.linkedin.com/in/brian-dobler17" target="_blank" rel="noopener" >
+      <a class="inline-flex" href="https://www.linkedin.com/in/brian-dobler17" target="_blank" rel="noopener" ></a>
         <Badge />
       </a>
       <img class="rounded-full size-12" src="/imagenes/fotoperf.png" alt="foto-portfolio"/>
     </div>
   </div>
 
-  <div id="mobileNav" class="hidden sm:hidden flex-col items-center justify-center backdrop-blur-md bg-yellow-500/90  shadow-lg fixed transition duration-300 top-0 left-0 w-full z-10">
+  <div id="mobileNav" class="hidden md:hidden flex-col items-center justify-center backdrop-blur-md bg-yellow-500/90  shadow-lg fixed transition duration-300 top-0 left-0 w-full z-10">
     <button id="closeMenu" class="absolute top-4 right-4 cursor:pointer text-base dark:text-white/80 text-gray-800">X</button>
     <nav class="flex flex-col items-center justify-center gap-4 mt-4 dark:text-white/80 text-gray-800">
       <a class="hover:bg-violet-800 rounded-sm px-4 py-2 hover:text-white duration-200 transition" href="#inicio">Inicio</a>
